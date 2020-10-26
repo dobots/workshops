@@ -23,6 +23,8 @@ Ideas for coming workshops:
 [https://vimeo.com/378682188](https://vimeo.com/378682188)
 
 * Try Ignition - Dolly
+
+* More photorealistic environments
     
 * Build a real drone
       
@@ -30,12 +32,12 @@ Ideas for coming workshops:
 
 * Migrating your package from ROS1 to ROS2
  
-*   Creating a realistic world in Gazebo (Eg. Coolsingel)
+* Creating a realistic world in Gazebo (Eg. Coolsingel)
    
-*  Designing and printing 3D parts you need
+* Designing and printing 3D parts you need
 
-*  Brainstorm/design how we can use learned modules to build robot control schemes.
+* Brainstorm/design how we can use learned modules to build robot control schemes.
 
-
+* Tutorial on Julia
 
 
