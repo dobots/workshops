@@ -1,5 +1,5 @@
 
-# Getting familiar with Jupyter notebook and creating RViz in it
+# Getting familiar with Jupyter notebook and Jupyter ROS
 
 ## Presentation ROS in the Jupyter notebook:
 [https://vimeo.com/378683268](https://vimeo.com/378683268)
@@ -22,7 +22,7 @@ pip3 install jupyter
 
 ## Launching First Notebook
 
-To launch a Jupyter notebook, open your terminal and navigate to the directory where you would like to save your notebook. Then type the below command and the program will instantiate a local server at  [http://localhost:8888/tree.](http://localhost:8888/tree.)
+To launch a Jupyter notebook, open your terminal and navigate to the directory where you would like to save your notebook. Then type the below command and the program will instantiate a local server at  [http://localhost:8888](http://localhost:8888)
 
 ```
 jupyter notebook
@@ -46,17 +46,55 @@ jupyter nbextension enable --py widgetsnbextension
 
 ## Create a slider
 
-Run `jupyter notebook`, the ncreate new notebook.
-Try the commands used in the `intro_ipywidgets.ipynb`file
+Run `jupyter notebook`, then create a new notebook.
+Try the commands used in the `workshops/jupyter/intro_ipywidgets.ipynb`file
 
 ## Jupyter-ROS library
 
-Folow the instructisons to install it:
-[jupyter-ros](https://github.com/RoboStack/jupyter-ros)
+Folow the instructions to install it: [jupyter-ros](https://github.com/RoboStack/jupyter-ros)
+
+### Troubleshooting
+
+1. If `jupyter nbextension enable --py --sys-prefix ipywidgets` fails, try to run it without the `--sys-prefix`:
+	```
+	jupyter nbextension enable --py widgetsnbextension
+	```
+
+2. If `jupyter nbextension enable --py --sys-prefix jupyros` fails, try to run it without the `--sys-prefix`:
+	```
+	jupyter nbextension enable --py jupyros
+	```
+
+3. If `jupyter labextension install jupyter-ros` fails, try to install labextension at first:
+	```
+	pip install jupyterlab
+	 ```
+	Then run the `jupyter labextension install jupyter-ros` again.
+
+4. If during the 'development installation' running
+	 ```
+	jupyter nbextension install --py --symlink --sys-prefix jupyros
+	jupyter nbextension enable --py --sys-prefix jupyros
+	``` 
+	returns with an error that permission denied, try to remove the `--sys-prefix` and add 	the `--user` tag.
 
 
-## Jupyter amphion demo
+5. As the official troubleshooting guide points out: You might see a warning like "The rospy package is not found in your $PYTHONPATH. Subscribe and publish are not going to work. Do you need to activate your ROS environment?"
+You can should set the path from inside the notebook using:
+	```
+	import sys
+	sys.path.append('/opt/ros/kinetic/lib/python2.7/dist-packages/')
 
+	# The next line should now work!
+	import jupyros
+	```
+6.  In case you have multiple instances of ROS installed on your system, you might have some problems when importing `rospy` in your notebook.  You need to make sure that your ROS_DISTRO is configured, and your ROS_PATH is set as well in your `~/.bashrc` :
+	
+	```
+	#Source ROS noetic
+	source /opt/ros/noetic/setup.bash
+	export ROS_DISTRO=noetic
+	```
 
 ## Installing Zethus
 
@@ -64,36 +102,36 @@ Follow the instructions:
 [https://github.com/rapyuta-robotics/zethus](https://github.com/rapyuta-robotics/zethus)
 
 * Clone the repository
- ```
- git clone https://github.com/rapyuta-robotics/zethus.git
- cd zethus
- ```
+	 ```
+	 git clone https://github.com/rapyuta-robotics/zethus.git
+	 cd zethus
+	 ```
  
  * Install npm
- ```
-sudo apt-get install npm
-```
+	 ```
+	sudo apt-get install npm
+	```
 
 * Install the package with npm
-```
-npm install
-```
+	```
+	npm install
+	```
 
 * Run the package:
-```
-npm run build
-```
+	```
+	npm run build
+	```
 * In a new terminal create a server:
-```
-npx serve
-```
-*In the webbrowser open the localhost lin kcreated by npx serve.
+	```
+	npx serve
+	```
+*In the webbrowser open the localhost link created by npx serve.
 
-* Running with docker:
-```
-docker build -t=zethus .
-docker run -p 8080:8080 zethus
-```
+* or use docker:
+	```
+	docker build -t=zethus .
+	docker run -p 8080:8080 zethus	
+	```
 
 
 # Start a ROS simulation and connect to it
@@ -101,8 +139,8 @@ docker run -p 8080:8080 zethus
 ## Clone the tb3 repo:
 
 ```
-git clone git@github.com:dobots/tb3.git
-ln -s git_ws/tb3 catkin_ws/src/tb3
+	git clone git@github.com:dobots/tb3.git
+	ln -s git_ws/tb3 catkin_ws/src/tb3
 ```
 
 ## Install ROS-bridge and start Gazebo:
@@ -131,17 +169,23 @@ In a new terminal run:
 docker run -p 8080:8080 zethus
 ```
 
-## Open a webbrowser:
+Open a webbrowser:
 ```
 localhost:8080
 ```
-ROS Endpoint:
+Configure the ROS Endpoint:
 ```
 ws://0.0.0.0:9090
 ```
 
 
+## Conclusions
 
+* Jupyter notebooks are useful tools when you would like to create some python based graphs, documentations and shared or present it to others
+
+* Jupyter-ROS is has many dependencies and errors. It can be frustrating to set it up and therefore, complicated to share with others. Possible solution could be to create a Docker image.
+
+* The installation of Zethus is not documented properly, it can be challenging to install. After installation it still crashes whenever we would like to edit the configurations. Our conclusion is to explore other web-based RViz tools, which might be more user friendly or easier to share with others.
 
 
 
