@@ -134,7 +134,7 @@ ros2 run turtlesim turtlesim_node
 14. To open a new terminal for keyboard control inside the Docker environment run:
 
 ```
-docker exec -it ros2_test /bin/bash
+docker exec -it ros2_focal /bin/bash
 ```
 
 15. Source the environment variables in this terminal as well:
