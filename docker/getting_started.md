@@ -43,8 +43,8 @@
 	```
 	mkdir docker
 	cd ~/docker
-	mkdir ros2_focal
-	cd ros2_focal	
+	mkdir ros2_rolling_core
+	cd ros2_rolling_core
 	```
 5. Create an example file:
 	```
@@ -65,7 +65,7 @@ RUN apt-get install -y ros-rolling-turtlesim ros-rolling-rqt-robot-steering ros-
 	
 7. Build this docker image in the same folder: 
 	 ```
-	docker build -t ros2_focal .
+	docker build -t ros2_rolling_core .
 	```
 
 8. List the installed Docker images: 
@@ -104,8 +104,8 @@ RUN apt-get install -y ros-rolling-turtlesim ros-rolling-rqt-robot-steering ros-
     --env="XAUTHORITY=$XAUTHORITY" \
     --volume="$PWD:/projects" \
     --runtime=nvidia \
-    --name="ros2_focal" \
-    ros2_focal \
+    --name="ros2_rolling_core" \
+    ros2_rolling_core \
     bash
 ```   
 
@@ -134,7 +134,7 @@ ros2 run turtlesim turtlesim_node
 14. To open a new terminal for keyboard control inside the Docker environment run:
 
 ```
-docker exec -it ros2_focal /bin/bash
+docker exec -it ros2_rolling_core /bin/bash
 ```
 
 15. Source the environment variables in this terminal as well:
