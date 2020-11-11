@@ -1,10 +1,11 @@
 #!/bin/bash
 
+
+
 #check if there is a /build and /devel in the current PWD
 if [ -f devel/.catkin ]; then
 echo "Starting from Catkin Workspace: $PWD, preparing it's ROS_PACKAGE_PATH."
 
-# If you start this script inside a catkin workspace, it will make that workspace available in the projects src folder
 sed -i 's/;\/projects\/src//' devel/.catkin
 echo -n "`cat devel/.catkin`;/projects/src" > devel/.catkin
 
@@ -19,6 +20,6 @@ docker run -iPt \
     --env="XAUTHORITY=$XAUTHORITY" \
     --volume="$PWD:/projects" \
     --runtime=nvidia \
-    --name="ros2rollingfocal" \
-    ros2rollingfocal \
+    --name="ros2_rolling_core" \
+    ros2_rolling_core \
     bash

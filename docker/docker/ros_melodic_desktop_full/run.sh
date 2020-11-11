@@ -22,3 +22,9 @@ docker run -iPt \
     --name="ros_melodic_desktop_full" \
     ros_melodic_desktop_full \
     bash
+
+# Note:
+# Pop OS nvidia drivers give some issues.
+# Go for this fix:
+# https://github.com/NVIDIA/nvidia-docker/issues/1114
+# Also remember to downgrade: libnvidia-container-tools:amd64 (1.3.0-1pop1~1601490873~18.04~cb62a8d, 1.3.0-1), nvidia-container-runtime:amd64 (3.4.0-1pop1~1601325114~18.04~2880fc6, 3.4.0-1), libnvidia-container1:amd64 (1.3.0-1pop1~1601490873~18.04~cb62a8d, 1.3.0-1)

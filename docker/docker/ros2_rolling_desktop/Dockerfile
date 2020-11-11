@@ -1,5 +1,4 @@
-FROM osrf/ros:melodic-desktop-full-bionic
-# 'desktop-full' includes gazebo9
+FROM osrf/ros:rolling-desktop
 
 # nvidia-container-runtime
 ENV NVIDIA_VISIBLE_DEVICES \
@@ -17,8 +16,8 @@ RUN apt-get update -y && apt-get install -y less nano
 RUN echo ". /ros_entrypoint.sh" >> ~/.bashrc
 # Fix entrypoint.sh file
 RUN sed -i 's/set -e//' /ros_entrypoint.sh
-# Additional ROS packages
-
+# Additional installs
+RUN apt-get install -y ros-rolling-gazebo-ros ros-rolling-xacro ros-rolling-joint-state-publisher
 
 # Ensures image runs bash
 CMD ["bash"]
