@@ -279,7 +279,19 @@ Run teleop:
  rosrun turtlesim turtle_teleop_key
 ```
 
+## Troubleshooting:
 
+### Graphics:
+
+- Most of the provided dockerfiles provided assume nvidia graphics and require nvidia drivers to be installed.
+
+- If using other graphics drivers, have a look at the dockerfile `ros2_melodic_alternative`
+
+- For details about using graphics with docker, see http://wiki.ros.org/docker/Tutorials/Hardware%20Acceleration.
+
+- If you are facing a 'nvidia-container-cli' error, the nvidia graphics are not installed correctly.
+
+- Note: If using PopOS, nvidia drivers give further 'nvidia-container-cli' issues. Go for this fix: https://github.com/NVIDIA/nvidia-docker/issues/1114. (Also remember to downgrade: libnvidia-container-tools, nvidia-container-runtime, libnvidia-container1)
 
 
 
