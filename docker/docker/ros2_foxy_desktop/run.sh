@@ -20,6 +20,6 @@ docker run -iPt \
     --env="COLCON_CURRENT_PREFIX=$COLCON_CURRENT_PREFIX" \
     --env="DISPLAY=$DISPLAY" \
     --runtime=nvidia \
-    --name="ros2_rolling_desktop" \
-    ros2_rolling_desktop \
+    --name="ros2_foxy_desktop" \
+    ros2_foxy_desktop \
     bash
