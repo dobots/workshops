@@ -1,4 +1,33 @@
-﻿#  How to get started with Docker images
+#  How to get started with Docker images
+
+
+## Cheatsheet to use Docker
+If you have already installed Docker then you can use the following lines to start Docker and open new terminals. If you need to install it, please jump to the installation section.
+1. Move into the folder of the files you would like to use inside Docker: 
+	```
+	cd ~/<path-to-your-ros-packages>/
+	```
+2. Start Docker:
+	```
+	./<path-to-your-docker-image/run.sh 
+	```
+3. Inside the Docker image move into the `/projects` folder to access the files from your host folder.
+	
+4. Open a new terminal inside the Docker environment:
+
+	```
+	docker exec -it <name-of-your-docker-image> /bin/bash
+	```
+
+5. Source the environment variables in this terminal as well:
+
+	```
+	. ros_entrypoint.sh
+	```
+
+
+
+
 
 ## Installation
 
