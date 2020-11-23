@@ -234,7 +234,7 @@ Doesn't create a symbolic link, because Docker doesn't like them ;)
 >**_NOTE:_**  use just a couple of buildings, otherwise Gazebo might crash! You might need to edit the files in blender to simplify the meshes.
 
 
-
+![wilhelminakade](https://github.com/dobots/workshops/blob/master/gazebo_environments/images/wilhelminakade.png)
 
 
 
