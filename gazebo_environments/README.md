@@ -58,6 +58,7 @@ Doesn't create a symbolic link, because Docker doesn't like them ;)
 7. Walk through the files .world file and discuss  each part
 8. Launch this world: `roslaunch simple_shapes_description simple_shapes_world.launch` 
 
+![simple shapes environment](https://github.com/dobots/workshops/blob/master/gazebo_environments/images/simple_shapes.png)
 
 
 9. On your host machine copy this folder inside the src directory and rename it.
@@ -118,6 +119,7 @@ Doesn't create a symbolic link, because Docker doesn't like them ;)
 
 20. Launch your world: `roslaunch simple_shapes_mesh_description simple_shapes_mesh_world.launch`
 
+![simple shapes environment with a custom mesh file](https://github.com/dobots/workshops/blob/master/gazebo_environments/images/simple_shapes_mesh.png)
 
 
 ## II. Part: Import part of a 3D map into Gazebo
@@ -263,7 +265,7 @@ roslaunch fox_gazebo spawn_fox.launch
 sudo apt-get install ros-melodic-teleop-twist-keyboard
 rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 ```
-
+![rover inside a custom environment](https://github.com/dobots/workshops/blob/master/gazebo_environments/images/simple_shapes_rover.png)
 
 
 
