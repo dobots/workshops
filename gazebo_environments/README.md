@@ -243,6 +243,24 @@ Doesn't create a symbolic link, because Docker doesn't like them ;)
 1. Copy the **fox_description**  and **fox_gazebo** folder into your workspace/src folder: [github.com/dobots/rofox](https://github.com/dobots/rofox)
  
   2. Walk through the included files:
+	  * fox_gazebo
+		  * launch 
+			  * spawn_fox.launch: looks for the *fox_description/urdf/base_fox_cart.urdf.xacro* file and spawns the robot usign *gazebo_ros*
+	 *  fox_description
+		 * media: includes the materials folder with the DoBots logo
+		 * meshes:  mesh files
+		 * urdf:
+			 * base_fox_cart.urdf.xacro:
+				 *  .xacro allows parameter usage in .urdf files
+				 * includes the base_link and link to the other .urdf files ( wheels, logo, lidar, etc.)
+				 * to use .sdf tags (Gazebo parameters) inside an urdf file, you need to use the `<gazebo>` tag e.g.:
+				```
+				<gazebo reference="link2">
+					<mu1>0.2</mu1>
+					<mu2>0.2</mu2>
+					<material>Gazebo/Black</material>
+				</gazebo>
+				```
   
 
 2. Open a new terminal:
