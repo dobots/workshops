@@ -111,7 +111,7 @@
     	<pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://test_description/meshes/map_purse.stl</uri>
+            <uri>model://test_description/meshes/groothandel.stl</uri>
              <scale>1.0 1.0 1.0</scale>
           </mesh>
         </geometry>
@@ -127,7 +127,7 @@
    	<pose>0 0 0 0 0 0</pose>
        	<geometry>
           <mesh>
-            <uri>model://test_description/meshes/map_purse.stl</uri>
+            <uri>model://test_description/meshes/groothandel.stl</uri>
               <scale>1.0 1.0 1.0</scale>
           </mesh>
         </geometry>
