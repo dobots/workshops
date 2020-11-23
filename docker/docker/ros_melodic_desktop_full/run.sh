@@ -23,6 +23,8 @@ docker run -iPt \
     ros_melodic_desktop_full \
     bash
 
+# If not using Nvidia drivers, remove the '--runtime=nvidia' and add '--device=/dev/dri' (http://wiki.ros.org/docker/Tutorials/Hardware%20Acceleration)
+
 # Note:
 # Pop OS nvidia drivers give some issues.
 # Go for this fix:

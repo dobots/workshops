@@ -23,3 +23,5 @@ docker run -iPt \
     --name="ros2_foxy_desktop" \
     ros2_foxy_desktop \
     bash
+    
+# If not using Nvidia drivers, remove the '--runtime=nvidia' and add '--device=/dev/dri' (http://wiki.ros.org/docker/Tutorials/Hardware%20Acceleration)
