@@ -1,0 +1,298 @@
+<?xml version="1.0"?>
+<sdf version="1.4">
+  <world name="default">
+  
+  
+    <!-- A global light source -->
+   <scene>
+      <sky>
+        <clouds>
+          <speed>12</speed>
+        </clouds>
+      </sky>
+   </scene>
+
+ <!--   <include>
+      <uri>model://sun</uri>
+    </include>-->
+    
+        <!-- A global light source -->
+    <light type="directional" name="sun">
+      <pose>0 0 1000 0 0 0</pose>
+      <cast_shadows>true</cast_shadows>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.5 0.5 0.5 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.4</direction>
+    </light>
+    
+    
+  
+        
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    
+     <include>
+      <pose>-16 4 0 0 0 0</pose> 
+      <uri>model://roffa</uri>
+    </include>
+    
+   <!--   <include>
+      <pose>55 0 75 0 0 0</pose> 
+      <uri>model://station_side</uri>
+    </include>  -->
+    
+    
+     <model name="bike_storage">
+    <static>true</static>
+    <pose>0 0 0 0 0 0</pose>
+    <link name="link"> 
+      <visual name="visual">
+    <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://stationsplein_description/meshes/bike_storage.dae</uri>
+             <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+        <cast_shadows>true</cast_shadows>
+       <material>
+  		<ambient>0.3 0.3 0.3 1.0</ambient>
+  		<diffuse>0.3 0.3 0.3 1.0</diffuse>
+  		<specular>0.3 0.3 0.3 1.0</specular>
+  		<emissive>0.3 0.3 0.3 1.0</emissive>
+	</material>
+      </visual>
+  <collision name="collision">
+   <pose>0 0 0 0 0 0</pose>
+       <geometry>
+          <mesh>
+            <uri>model://stationsplein_description/meshes/bike_storage.dae</uri>
+             <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+  
+  
+       <model name="left_plantbox">
+    <static>true</static>
+    <pose>0 0 -0.6 0 0 0</pose>
+    <link name="link"> 
+      <visual name="visual">
+    <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://stationsplein_description/meshes/plantleft.dae</uri>
+             <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+        <cast_shadows>true</cast_shadows>
+       <material>
+  		<ambient>0 0.2 0 1.0</ambient>
+  		<diffuse>0 0.2 0 1.0</diffuse>
+  		<specular>0 0.2 0 1.0</specular>
+  		<emissive>0 0.2 0 1.0</emissive>
+	</material>
+            
+      </visual>
+  <collision name="collision">
+   <pose>0 0 0 0 0 0</pose>
+       <geometry>
+          <mesh>
+            <uri>model://stationsplein_description/meshes/plantleft.dae</uri>
+             <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+    
+        <model name="right_plantbox">
+    <static>true</static>
+    <pose>0 0 -0.2 0 0 0 0</pose>
+    <link name="link"> 
+      <visual name="visual">
+    <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://stationsplein_description/meshes/plantright.dae</uri>
+             <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+        <cast_shadows>true</cast_shadows>
+        <material>
+  		<ambient>0 0.2 0 1.0</ambient>
+  		<diffuse>0 0.2 0 1.0</diffuse>
+  		<specular>0 0.2 0 1.0</specular>
+  		<emissive>0 0.2 0 1.0</emissive>
+	</material>
+      </visual>
+  <collision name="collision">
+   <pose>0 0 0 0 0 0</pose>
+       <geometry>
+          <mesh>
+            <uri>model://stationsplein_description/meshes/plantright.dae</uri>
+             <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+    
+    
+        <model name="metro">
+    <static>true</static>
+    <pose>0 0 0 0 0 0</pose>
+    <link name="link"> 
+      <visual name="visual">
+    <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://stationsplein_description/meshes/metro.dae</uri>
+             <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+        <cast_shadows>true</cast_shadows>
+       <material>
+  		<ambient>0.3 0.3 0.3 1.0</ambient>
+  		<diffuse>0.3 0.3 0.3 1.0</diffuse>
+  		<specular>0.3 0.3 0.3 1.0</specular>
+  		<emissive>0.3 0.3 0.3 1.0</emissive>
+	</material>
+      </visual>
+  <collision name="collision">
+   <pose>0 0 0 0 0 0</pose>
+       <geometry>
+          <mesh>
+            <uri>model://stationsplein_description/meshes/metro.dae</uri>
+             <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+    
+  
+      <!--    <model name='unit_box'>
+        <static>1</static>
+      <pose frame=''>75 0 0 0 0 0</pose>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>30 70 10</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>30 70 10</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>-->
+    
+    
+    
+   <!--   <model name='side_view'>
+        <static>1</static>
+      <pose> 300 0 50 0 0 3.14</pose>
+      <link name='link'>
+       <collision name='collision'>
+          <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://stationsplein_description/meshes/station_side.dae</uri>
+             <scale>100 100 100</scale>
+          </mesh>
+        </geometry>
+        </collision>
+        <visual name='visual'>
+       <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://stationsplein_description/meshes/station_side.dae</uri>
+             <scale>100 100 100</scale>
+          </mesh>
+          <cast_shadows>false</cast_shadows>
+        </geometry>
+           
+       
+        </visual>
+      </link>
+    </model>-->
+    
+    
+ <!--Add actors -->
+    <include>
+      <pose>0 0 0 0 0 0</pose> 
+      <uri>model://actor1</uri>
+    </include>
+ 
+ 
+       <include>
+      <pose>0 0 0 0 0 0</pose> 
+      <uri>model://actor2</uri>
+    </include>
+ 
+ 
+        <include>
+      <pose>0 0 0 0 0 0</pose> 
+      <uri>model://actor3</uri>
+    </include>
+    
+            <include>
+      <pose>0 0 0 0 0 0</pose> 
+      <uri>model://actor4</uri>
+    </include>
+    
+            <include>
+      <pose>0 0 0 0 0 0</pose> 
+      <uri>model://actor5</uri>
+    </include>
+    
+                <include>
+      <pose>0 0 0 0 0 0</pose> 
+      <uri>model://actor6</uri>
+    </include>
+    
+                <include>
+      <pose>0 0 0 0 0 0</pose> 
+      <uri>model://actor7</uri>
+    </include>
+
+                <include>
+      <pose>0 0 0 0 0 0</pose> 
+      <uri>model://actor8</uri>
+    </include>
+    
+                    <include>
+      <pose>0 0 0 0 0 0</pose> 
+      <uri>model://actor9</uri>
+    </include>
+    
+                    <include>
+      <pose>0 0 0 0 0 0</pose> 
+      <uri>model://actor10</uri>
+    </include>
+ 
+    
+
+  </world>
+</sdf>
