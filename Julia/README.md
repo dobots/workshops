@@ -1,12 +1,93 @@
-Julia tutorial 
+# Julia workshop #
 
-Setup Julia: 
+### Setup Julia ###
 
-- Download the current stable Julia release from https://julialang.org/downloads/
+**Basic setup**
 
-- Start Julia and enter ] to use the built in package manager (https://docs.julialang.org/en/v1/stdlib/Pkg/index.html) and enter “add IJulia Plots CSV DataFrames”. This may take a few minutes. After, leave the package manager with a backspace, to enter the Julia prompt again.
+* Julia can be downloaded and installed in Linux with the use of a package manager known as ‘Snaps’. Follow the steps given below to install Snaps and Julia in a Linux system using command-line:
+	```
+	sudo apt install snapd
+	```
 
-- Start a Jupyter notebook session, by typing “using IJulia” <enter> followed by “notebook()” <enter>. On the first time, this will ask to install Jupyter via Conda, press enter to accept. It will take around 10 minutes. This should open a new tab in your browser, pointing to http://localhost:8888/tree. Now near the top right, click New, and select Julia to start a new empty Jupyter notebook.
+* Install Julia: 
+	```
+	sudo snap install julia --classic
+	```
 
-- Verify that the new notebook works, by entering “reverse("enod")“, and pressing Ctrl+enter
+* Run Julia: 
+	```
+	julia
+	```
+
+**Extra Information**
+* After starting julia, enter ] in the command line to use the build in package manager (https://docs.julialang.org/en/v1/stdlib/Pkg/index.html) and leave the package manager with a backspace to enter the julia prompt again 
+
+* For example (may takes a few minutes): 
+	```
+	1. julia
+	2. ]
+	3. add IJulia Plots CSV DataFrames
+	4. using IJulia
+	5. notebook()
+	```
+
+* Do: ] --> package manager
+* Do: ? --> help
+* Do: ; --> shell
+* Do: backspace --> back to Julia 
+
+
+### Practice ###
+
+**Hello World**
+* Leave Julia 
+* Go to Julia_workshop
+* Make a new file called hello_world.jl:
+	```
+	nano hello_world.jl
+	```
+* Add the following to the file: 
+	```
+	#Julia program to print Hellow World
+
+	println("Hello World!") 
+	```
+* Put in the following command: 
+	```
+	julia hello_world.jl
+	```
+* This should print: Hello World! 
+
+### Tutorial ###
+**Introduction video**
+* https://www.youtube.com/watch?v=qhrY0c_BHs8 (start at: 3:54) 
+
+**Explanation coding**
+* https://www.youtube.com/watch?v=Cj6bjqS5otM (start at: 10:40) 
+
+**Julia Acedemy**
+* This is a free Julia course (All the files are on github already) 
+* This is the website with explanation videos: https://juliaacademy.com/courses/375479/lectures/5815852
+
+### Docker ###
+
+Maybe it is nice to try Julia in Docker. I have tried this, but I didn't manage to do it. Maybe this is a nice practice
+
+* get docker image: https://hub.docker.com/_/julia
+* Do:
+	```
+	docker image list
+	```
+	
+* Create Dockerfile: 
+	```
+	FROM julia:latest
+	....? 
+	```
+
+* Create run.sh file: 
+
+
+
+
 
