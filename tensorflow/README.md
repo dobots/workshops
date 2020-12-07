@@ -15,6 +15,21 @@ To go souces.
 	```
 	https://www.tensorflow.org/tutorials
 	```
+## Simple classification tutorial
+* The tutorial is online at: 
+```
+https://www.tensorflow.org/tutorials/keras/classification
+```
+* pull the latest tf docker for simple tutorials
+
+	```
+	docker pull tensorflow/tensorflow:latest
+	```
+* run the jupyter notebook
+	
+	```
+	docker run -it -p 8888:8888 tensorflow/tensorflow:latest-jupyter
+	```
 
 ## ROS noetic tf docker 
 This docker is setup to work with tensorflow, ROS noetic, and Openai Gym:
