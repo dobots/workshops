@@ -52,16 +52,22 @@ This docker is setup to work with tensorflow, ROS noetic, and Openai Gym:
 
 3. Copy the tf2RL.py script to your projects folder:
 	```
-	mv tf2RL.py ~/projects/
+	cp -r /scripts ~/projects/scripts
 	```
 
 4. Move to the projects folder, and run the docker script to enter the container: 
 	
 	```
-	cd ~/projects
+	cd ~/projects/
 	~/dockers/ros_noetic_tf/run.sh
 	```
 
+1. run the following scripts to see a openai render:
+	```
+	Python3 gym_demo.py
+	Python3 gym_demo_1.py
+	Python3 gym_demo_2.py
+	```
 
 ### TF tutorial Actor-Critic
 The tutorial can be found at:
@@ -71,7 +77,7 @@ The tutorial can be found at:
 
 1. Move to the project folder:
 	```
-	cd ~/projects/tensorflow
+	cd ~/projects/scripts
 	```
 2. Run the tutorial python script:
 	```
