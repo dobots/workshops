@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+	<node pkg="python_counter" type="python_counter_pub.py" name="python_counter_pub" output="screen"/>
+	<node pkg="python_counter" type="python_counter_sub_oop.py" name="python_counter_sub_oop" output="screen"/>
+</launch>
+
