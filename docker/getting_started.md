@@ -66,7 +66,7 @@ If you have already installed Docker then you can use the following lines to sta
 	docker image list
 	```
 
-## Create and build  a ROS2 Docker container
+## Create and build a ROS2 Docker image
 
 4. Create a Docker folder:
 	```
