@@ -1,4 +1,4 @@
-# Webots: robot simulator
+# Webots: robot simulator - Part 1
 
 
 ## Installation
@@ -46,3 +46,40 @@ To compare your world with the solution, go to your files and find the folder na
 Now you can compare the two files in a text editor.
 
 To load the solution world directly into webots go to:  File-> Open Sample World -> samples-> tutorials
+
+
+
+# Webots - Part 2
+
+## Webots Docker image
+A Docker image has been created to use with ROS. You can find it in the docker directory of this repository.
+1. After downloading you need to build it:
+```
+docker build -t ros_melodic_desktop_webots  .
+```
+
+or build the docker file with px4 and QGRoundcontrol installation:
+
+```
+docker build -t ros_melodic_desktop_px4_webots  .
+```
+2. To check whether it was succesfully built run:
+```
+docker image list
+```
+	 
+3. Move into the 	workshop/webots directory and start the run.sh script:
+
+```
+cd ~/git_ws/workshop/webots
+~/docker/ros_melodic_desktop_webots/run.sh
+``` 
+
+
+## Continue the tutorials
+
+Let's continue the tutorials from the official website:
+
+[https://cyberbotics.com/doc/guide/tutorial](https://cyberbotics.com/doc/guide/tutorial-4-more-about-controllers)
+
+
