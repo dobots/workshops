@@ -16,14 +16,18 @@ $ cd /projects/mh_ws
 
 STEP 1 (Adding repositories)
 Add necesarry repositories:
+
 $ sudo add-apt-repository ppa:thomas-schiex/blender
+
 $ sudo add-apt-repository ppa:makehuman-official/makehuman-community
 
 STEP 2 (Installing necesarry programs)
 Install Blender:
+
 $ sudo apt-get install blender
 
 To install MakeHuman (Do not install 'makehuman' without '-community':
+
 $ sudo apt-get install makehuman-community
 
 
@@ -37,6 +41,7 @@ It is recommended to have the MHX2 README.md  open.
 
 
 $ cd /projects/mh_ws/
+
 $ cp -R src/mhx2-makehuman-exchange/9_export_mhx2/ /usr/share/makehuman-community/plugins/
 
 Configure MHX2 in Blender
