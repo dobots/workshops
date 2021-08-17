@@ -116,3 +116,6 @@ https://bitbucket.org/Diffeomorphic/retarget_bvh/src/master/
 
 
 # Creating A Makehuman Model
+```bash
+$ cp -R src/retarget_bvh/ /usr/share/blender/2.92/scripts/addons/
+```
