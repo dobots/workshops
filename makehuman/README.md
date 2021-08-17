@@ -1,10 +1,9 @@
 This repository explains how to use MakeHuman and Blender to model and animate human models for use in Gazebo.
 
-Prequisite:
+# Prequisite:
 - workshop/docker
 - ROS Summerchool Day 2
 
-Lines which include '$' as a precursor are terminal commands.
 
 If blender and/or makehuman is already installed, skip to STEP 3 to configure plugins.
 
@@ -17,39 +16,32 @@ https://prabhjotkaurgosal.com/create-animated-human-models-for-gazebo-using-make
 Start a Docker container in 'workshops/makehuman'
 
 Change to directory of the workshop 'mh_ws'
-$ cd /projects/mh_ws
 
-STEP 1 (Adding repositories)
+'''bash
+cd /projects/mh_ws
+'''
+
+# STEP 1 (Adding repositories)
 Add necesarry repositories:
 
-$ sudo add-apt-repository ppa:thomas-schiex/blender -y
-$ sudo add-apt-repository ppa:makehuman-official/makehuman-community -y
-
-STEP 2 (Installing necesarry programs)
+'''bash
+sudo add-apt-repository ppa:thomas-schiex/blender -y
+sudo add-apt-repository ppa:makehuman-official/makehuman-community -y
+'''
+ 
+# STEP 2 (Installing necesarry programs)
 Install Blender:
-$ sudo apt-get install blender -y
+'''bash
+sudo apt-get install blender -y
+'''
 
 To install MakeHuman (Do not install 'makehuman' without '-community':
-$ sudo apt-get install makehuman-community -y
+'''bash
+sudo apt-get install makehuman-community -y
+'''
 
 
-$ sudo add-apt-repository ppa:thomas-schiex/blender
-
-$ sudo add-apt-repository ppa:makehuman-official/makehuman-community
-
-STEP 2 (Installing necesarry programs)
-Install Blender:
-
-$ sudo apt-get install blender
-
-To install MakeHuman (Do not install 'makehuman' without '-community':
-
-$ sudo apt-get install makehuman-community
-
-
-
-
-STEP3 (Configure Plugins)
+# STEP3 (Configure Plugins)
 
 Configuring MHX2.
 
@@ -60,23 +52,29 @@ It is recommended to have the MHX2 README.md  open.
 
 Configure MHX2 for Makehuman.
 
-$ cd /projects/mh_ws/
-$ cp -R src/mhx2-makehuman-exchange/9_export_mhx2/ /usr/share/makehuman-community/plugins/
+'''bash
+cd /projects/mh_ws/
+cp -R src/mhx2-makehuman-exchange/9_export_mhx2/ /usr/share/makehuman-community/plugins/
+'''
 
 Configure MHX2 for Blender 
 Check the version of Blender and directory name.
-$ blender --version
-$ ls /usr/share/blender/
-
+'''bash
+blender --version
+ls /usr/share/blender/
+'''
 
 $ cd /projects/mh_ws/
 
 Replace [VERSION] with the version and/or directory name.
- 
-$ cp -R src/mhx2-makehuman-exchange/import_runtime_mhx2 /usr/share/blender/[VERSION]/scripts/addons/
+
+'''bash 
+cp -R src/mhx2-makehuman-exchange/import_runtime_mhx2 /usr/share/blender/[VERSION]/scripts/addons/
+'''
 
 At the time of writing the version of Blender is 2.92, so the command looks like:
-$ cp -R src/mhx2-makehuman-exchange/import_runtime_mhx2 /usr/share/blender/2.92/scripts/addons/
-
+'''bash
+cp -R src/mhx2-makehuman-exchange/import_runtime_mhx2 /usr/share/blender/2.92/scripts/addons/
+'''
 
 
