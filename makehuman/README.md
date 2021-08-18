@@ -147,6 +147,27 @@ https://www.youtube.com/watch?v=dFLPjVWjmCY
 In MakeHuman you may create any human models you can.
 Do not add any eyes or tongue in Geometries.
 
-In Pose/Animate select "Cmu mb" as the Rig presets.
+In Pose/Animate select "Cmu mb" as the Rig presets. Marked in the red square.
 
-![Makehuman](/home/dobots/Pictures/MakeHuman.png)
+![Makehuman](https://i.imgur.com/ffqZzgD.png)
+
+
+Export the file as MHX2 (File -> Export - > MHX2), if the installation and plugin configuration was successful, the MHX2 file type should be available in.
+
+![Makehuman](https://i.imgur.com/j3CzX6P.png)
+
+Open Blender in workshop via terminal.
+
+
+Include the preferences.
+Edit -> preferences:
+MakeHuman: Import:Runtime: MakeHuman Exhcange 2 (.mhx2)
+
+and
+
+BVH: Retargeter
+
+![Makehuman](https://i.imgur.com/NG7RM1t.png)
+
+
+In blender import a human model.  In directory Examples, select a model to import.
