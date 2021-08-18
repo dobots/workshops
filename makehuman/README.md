@@ -110,12 +110,43 @@ $ cp -R src/mhx2-makehuman-exchange/import_runtime_mhx2 /usr/share/blender/2.92/
 
 ### Configure Retargetter for Blender (Formerly known as Makewalk)
 Configuring retargetter for Blender is done similarly to MHX2, by cloning the git repository and then adding the folders to the addon folder.
-For convenience the repository has already been cloned and included in the folder. You may also clone the repository at:
+For convenience the repository has already been cloned and included in the "src" directory. You may also clone the repository at:
 
 https://bitbucket.org/Diffeomorphic/retarget_bvh/src/master/
 
+Clone the "retarget_bvh" directory to the addon plugin. Replace [VERSION] with the current version.
 
-# Creating A Makehuman Model
 ```bash
 $ cp -R src/retarget_bvh/ /usr/share/blender/2.92/scripts/addons/
 ```
+
+## Confirming plugins and addons.
+Checking if the folders were properly moved to the correct directories. If the directory exists, the command should resturn "Directory Exists", otherwise the command would not return anything.
+
+Checking MHX2 in Makehuman
+```bash
+$ [ -d /usr/share/makehuman-community/plugins/9_export_mhx2 ] && echo "Directory Exists"
+
+Directory Exists
+```
+
+# Creating A Makehuman Model
+To open the programs in the workspace execute them in separate terminals
+```bash
+$ blender
+$ makehuman-community
+```
+For the creation of the models follow the instructions given at:
+
+https://prabhjotkaurgosal.com/create-animated-human-models-for-gazebo-using-makehuman-and-blender/
+
+and
+
+https://www.youtube.com/watch?v=dFLPjVWjmCY
+
+In MakeHuman you may create any human models you can.
+Do not add any eyes or tongue in Geometries.
+
+In Pose/Animate select "Cmu mb" as the Rig presets.
+
+![Makehuman](/home/dobots/Pictures/MakeHuman.png)
