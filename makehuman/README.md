@@ -171,3 +171,5 @@ BVH: Retargeter
 
 
 In blender import a human model.  In directory Examples, select a model to import.
+
+### Using motion Capture
