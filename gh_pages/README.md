@@ -23,7 +23,13 @@ https://www.hywel.me/static/site/wordpress/2016/07/17/fast-free-static-website-w
 ## Install Wordpress
 
 ## Install a server
+
 https://zuziko.com/tutorials/how-to-install-wordpress-on-windows-using-wamp-server/
+
+Incase of error, update the microsoft visual c++
+https://www.youtube.com/watch?v=h8QDs2Ssr5s
+
+
 
 ## Add the simply static plugin
 
