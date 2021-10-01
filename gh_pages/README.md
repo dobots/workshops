@@ -59,6 +59,10 @@ https://www.hywel.me/static/site/wordpress/2016/07/17/fast-free-static-website-w
 7.3. Generate static files and replace the files in your local github folder
 7.4. Commit the changes and enjoy your new website
 
+## 8. Sources
+
+8.1 Add the ASIMOVO logos from the drive https://drive.google.com/drive/u/0/folders/1P2MrBsEtDp4QgrDciogkGoJERmV7i3q8
+
 
 
  
